@@ -1,0 +1,38 @@
+/* O que fazer/escrever aqui? REGRAS DE FORMATAÇÃO */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../imagens/tarde.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    /* background-attachment: fixed; Deixa a imagem parada na tela */
+    /* background-size: cover; faz a imagem preencher toda a tela*/
+}
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: rgba(0, 0, 0, 0.384);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-shadow: red 5px 5px 10px, blue -5px -5px 10px;
+}
+
+div {
+    background-color: rgba(255, 255, 255, 0.384);
+    width: 70%;
+    margin: auto;
+    border-radius: 20px;
+    padding: 5px;
+    /* padding: 1px; espaçamento interno dentro de uma div */
+    box-shadow: red 5px 5px 10px, blue -5px -5px 10px;
+}
+
+/* tornando as imagens flexíveis/responsivas */
+img{max-width: 100%;}
+
+figure{text-align: center;}
