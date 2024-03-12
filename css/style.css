@@ -36,3 +36,12 @@ div {
 img{max-width: 100%;}
 
 figure{text-align: center;}
+
+h2 {
+    font-size: 20px;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-left-style: solid;
+    border-left-width: 20px;
+    padding-left: 10px;
+}
