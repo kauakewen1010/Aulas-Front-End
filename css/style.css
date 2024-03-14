@@ -1,41 +1,91 @@
 /* O que fazer/escrever aqui? REGRAS DE FORMATAÇÃO */
 
+/* Seletor UNIVERSAL
+Alterando o comportamento
+do Box Model CSS. Usando
+esta regra evitamos os problemas
+encontrados ao se usar width, 
+height, padding e border ao mesmo tempo. */
+* { box-sizing: border-box; }
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url(../imagens/tarde.jpg);
     background-attachment: fixed;
     background-size: cover;
-    /* background-attachment: fixed; Deixa a imagem parada na tela */
-    /* background-size: cover; faz a imagem preencher toda a tela*/
 }
 
-h1{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: rgba(0, 0, 0, 0.384);
-    color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-transform: uppercase;
-    text-align: center;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    text-shadow: red 5px 5px 10px, blue -5px -5px 10px;
-}
-
-div {
-    background-color: rgba(255, 255, 255, 0.384);
+/* Seletor IDENTIFICADO */
+#container {
+    background-color: white;
     width: 70%;
     margin: auto;
-    border-radius: 20px;
-    padding: 5px;
-    /* padding: 1px; espaçamento interno dentro de uma div */
-    box-shadow: red 5px 5px 10px, blue -5px -5px 10px;
+    border-radius: 8px;
+
+    /* Espaçamento INTERNO */
+    padding: 16px;
+
+    /* Sombra na caixa/bloco
+    box-shadow: cor distX distY suavização */
+    box-shadow:
+        red 5px 5px 10px,
+        purple -5px -5px 10px;
 }
 
-/* tornando as imagens flexíveis/responsivas */
-img{max-width: 100%;}
+/* Tornando as imagens flexíveis/responsivas */
+img {
+    max-width: 100%;
+}
 
-figure{text-align: center;}
+figure {
+    text-align: center;
+}
+
+/* Exercício
+Crie uma nova regra CSS para estilizar o elemento h1 com as seguintes características:
+
+- Fonte: Impact, Verdana, Arial e sans-serif
+- Cor de fundo: escura com um pouco de transparência
+- Cor do texto: clara
+- Espaçamento: interno APENAS pra cima e pra baixo
+- Letras maiúsculas
+- Texto alinhado no meio
+- Bordas arredondadas APENAS nos cantos superiores
+- Sombra no TEXTO */
+
+h1 {
+    margin: 0;
+    font-family: Impact, Verdana, Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    color:white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    
+    /* Versão específica para cada: */
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+    
+    /* Versão abreviada: */
+    border-radius: 10px 10px 0 0;
+
+    text-shadow: black 3px 3px 5px;
+
+    letter-spacing: 2px;
+    font-weight: normal;
+
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black; 
+    
+    /* Propriedades com prefixo
+    -webkit-*, -moz-*, -o-*
+    
+    Propriedades relacionadas à 
+    determinados navegadores. Podem
+    ter problemas de compatibilidade.  
+    */
+}
 
 h2 {
     font-size: 20px;
@@ -43,5 +93,102 @@ h2 {
     border-bottom-width: 5px;
     border-left-style: solid;
     border-left-width: 20px;
+    /* margin-left: 30px; */
     padding-left: 10px;
 }
+
+/* Seletor TAG (vale para todos os <a>) */
+a { text-decoration: none; }
+
+figure img {
+    transform: scale(0.8);
+    transition: 0.5s;
+    filter: grayscale(100%);
+}
+
+/* Usando a pseudo-classe :hover
+(ação de passar o mouse) */
+figure img:hover {
+    transform: scale(1) rotateX(360deg);
+    filter: grayscale(0);
+}
+
+
+/* Seletor AGRUPADO (grupo de seletores) */
+p, li { font-size: 18px; }
+
+
+/* Seletor CLASSE */
+.centralizar { text-align: center; }
+
+.sombra { text-shadow: red 1px 1px 5px; }
+
+.destaque {
+    background-color: black;
+    color: white;
+    padding: 3px;
+    border-radius: 4px;
+}
+
+
+.destaques-back {
+    background-color: rgba(255, 255, 0, 0.241);
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+
+/**** 
+Regras para o menu e seus links 
+****/
+
+nav { text-align: center; }
+
+/* Regra para o estado inicial dos links */
+nav a { 
+    color: white;
+    font-weight: bold;
+    background-color: grey;
+    display: inline-block;
+    width: 50%;
+    padding: 2%;
+    transition: 1s;
+}
+
+/* Regra para o estado de acionamento dos
+links */
+nav a:hover, nav a:focus {
+    background-color: black;
+}
+
+nav a:first-child {
+    border-bottom-left-radius: 8px;
+}
+
+nav a:last-child {
+    border-bottom-right-radius: 8px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+ul li {
+    color: red;
+    list-style-type: square;
+}
+
+ul li::marker {
+    content:"👉 ";
+}
+
+ul li:first-child{font-weight: bold;}
+ul li:last-child{font-style: italic;}
+ul li:nth-child(3){color: green;}
+
+/* Cores alternadas */
+ul li:nth-child(even){background: pink;}
+ul li:nth-child(odd){background: lightblue;}
