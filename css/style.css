@@ -192,3 +192,20 @@ ul li:nth-child(3){color: green;}
 /* Cores alternadas */
 ul li:nth-child(even){background: pink;}
 ul li:nth-child(odd){background: lightblue;}
+
+details {
+    border: solid;
+    padding: 9px;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;    
+}
+
+summary::marker {content: "😐 ";}
+
+/* Seletor de atributo somente quando o details estiver com o atributo open (portanto, quando ele é acionado) faremos a troca do marcador/emoji. */
+
+details[open] summary::marker {content: "😛 ";}
+
