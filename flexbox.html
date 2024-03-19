@@ -22,11 +22,19 @@
 			width: 80%;
 			margin: auto;
 			background-color: rgb(143, 143, 7);
-			height: 600px;
+			height: 1100px;
 
 			display: flex;
-			justify-content: space-between;
+			/* Justify-content
+			em direção padrão "row", se comporta como alinhamento horizontal.
+			
+			Se estiver na direção "colum", se comporta como alinhamento vertical.*/
+			justify-content: flex-start;
+
+			/* aligh-itens funciona de forma contrária. Ou seja, em modo "row" alinha verticalmente.
+			Em modo "column", alinha horizontalmente. */
 			align-items: center;
+			flex-direction: column; /*row padrão */
 		}
 
 	</style>
