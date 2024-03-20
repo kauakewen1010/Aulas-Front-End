@@ -5,6 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        /* 1) Regras de uso geral */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: verdana;
+            background-color: lightblue;
+        }
+
+        .container {
+            background-color: white;
+            padding: 5px;
+            box-shadow: black 0 0 5px;
+        }
+
+        /* Regra de reset CSS é comum resetar valores de alguns elemnetos/propriedades visando evitar inconsitências nos resultados. */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        h2, p {padding: 4px;}
+
+        .topo {
+            background-color: hotpink;
+            padding: 4px;
+        }
+
+        h1 {
+            background-color: yellow;
+        }
+
+
+        .menu {
+            background-color: yellowgreen;
+        }
+
+        .conteudo {
+            padding: 4px;
+            background-color: aquamarine;
+        }
+
+        .um, .dois, .tres {
+            border: solid 1px black;
+        }
+
+        .um {
+            background-color: orange;
+        }
+        
+        .dois {
+            background-color: pink;
+        }
+        
+        .tres {
+            background-color: yellowgreen;
+        }
+
+        .rodape {
+            background-color: red;
+        }
+        /* 2) Regras de uso condicional (COM MEDIA QUERIES) */
+    </style>
 </head>
 
 <body>
@@ -36,7 +102,7 @@
                 voluptates labore cupiditate quis quia excepturi assumenda!</p>
             </article>
         </main>
-        <footer>
+        <footer class="rodape">
             <h2>Rodapé</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi autem, magni iure dolore assumenda quasi ullam error? Voluptatum, odit magnam.</p>
         </footer>
