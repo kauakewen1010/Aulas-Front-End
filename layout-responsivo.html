@@ -88,6 +88,29 @@
                 align-items: center;
             }
         }
+
+        @media screen and (min-width: 740px) {
+            .conteudo {
+                display: flex;
+                /* Propriedade nova (gap) usada para espaçamentos entre elementos flex. Necessário ajustar a largura e/ou altura dos elementos em que haverá espaçamento. */
+                /* gap: 10px; cria um espaço entre os itens */
+
+                /* Habilitando a "quebra" da linha (row). Ou seja, se não tive mais espaço para encaixar lado a lado, acontecerá uma quebra (o elemento vai para a linha de baixo) */
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                
+            }
+
+            .um {width: 69%;}
+
+            .dois {width: 30%;}
+
+            .tres {
+                width: 100%;
+                margin-top: 1%;
+            }
+        }
     </style>
 </head>
 
